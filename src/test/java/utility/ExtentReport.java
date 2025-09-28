@@ -23,7 +23,7 @@ public class ExtentReport implements ITestListener {
 	
 	public void onStart(ITestContext context) {
 	    
-		String path=System.getProperty("user.dir"+"//Reports//ExtentReports.html");
+		String path=System.getProperty("user.dir"+"\\target\\ExtentReports\\ExtentReports.html");
 		sparkReporter=new ExtentSparkReporter(path);
 		
 		sparkReporter.config().setTheme(Theme.DARK);
