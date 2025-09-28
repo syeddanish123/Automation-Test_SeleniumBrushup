@@ -23,7 +23,16 @@ public class ExtentReport implements ITestListener {
 	
 	public void onStart(ITestContext context) {
 	    
-		String path=System.getProperty("user.dir"+"\\target\\ExtentReports\\ExtentReports.html");
+		String reportDirPath = System.getProperty("user.dir") + "\\target\\ExtentReports";
+
+// create folder if it doesn't exist
+File reportDir = new File(reportDirPath);
+if(!reportDir.exists()) {
+    reportDir.mkdirs();
+}
+
+// full report path
+String path = reportDirPath + "\\ExtentReports.html";
 		sparkReporter=new ExtentSparkReporter(path);
 		
 		sparkReporter.config().setTheme(Theme.DARK);
