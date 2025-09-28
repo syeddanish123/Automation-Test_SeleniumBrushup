@@ -19,11 +19,7 @@
       <version>3.0.0-M9</version>
       <configuration>
         <groups>${group}</groups>
-        <suiteXmlFiles>
-          <suiteXmlFile>testng.xml</suiteXmlFile> 
-        </suiteXmlFiles>
         <systemPropertyVariables>
-			<os>${os}</os>
 			<browser>${browser}</browser>
 			<execution>${execution}</execution>
 			<env>${env}</env>
